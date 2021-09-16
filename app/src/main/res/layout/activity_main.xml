@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layOut"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#646464">
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sliderRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="255"
+        app:thumbColor="@color/red"
+        app:trackColor="@color/red" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sliderGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sliderRed"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="255"
+        app:thumbColor="@color/green"
+        app:trackColor="@color/green" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/sliderBlue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sliderGreen"
+        android:stepSize="1"
+        android:valueFrom="0"
+        android:valueTo="255"
+        app:thumbColor="@color/blue"
+        app:trackColor="@color/blue" />
+
+    <View
+        android:id="@+id/szines"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/borderBottom"
+        android:layout_alignStart="@+id/borderLeft"
+        android:layout_alignTop="@+id/borderTop"
+        android:layout_alignEnd="@+id/borderRight"
+        android:layout_alignBottom="@+id/borderBottom"
+        android:background="@color/black" />
+
+    <View
+        android:background="@color/white"
+        android:id="@+id/borderTop"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_above="@id/textView"
+        android:layout_alignStart="@+id/borderLeft"
+        android:layout_alignEnd="@+id/borderRight"
+        android:layout_marginBottom="70dp"/>
+
+    <View
+        android:background="@color/white"
+        android:id="@+id/borderBottom"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/textView"
+        android:layout_alignStart="@+id/borderLeft"
+        android:layout_alignEnd="@+id/borderRight"
+        android:layout_marginTop="70dp"/>
+
+    <View
+        android:background="@color/white"
+        android:id="@+id/borderLeft"
+        android:layout_width="4dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignTop="@+id/borderTop"
+        android:layout_alignBottom="@+id/borderBottom"
+        android:layout_marginLeft="-70dp"/>
+
+    <View
+        android:background="@color/white"
+        android:id="@+id/borderRight"
+        android:layout_width="4dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/borderTop"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignBottom="@+id/borderBottom"
+        android:layout_marginRight="-70dp"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/kezdo_ertek"
+        android:textAlignment="center"
+        android:textSize="35sp" />
+
+</RelativeLayout>
